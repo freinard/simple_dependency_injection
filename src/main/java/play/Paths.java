@@ -2,32 +2,40 @@ package play;
 
 public class Paths {
 
-    private String path_one;
-    private String path_two;
-    private String path_three;
+    private ActionableElement usernameField;
+    private ActionableElement passwordField;
+    private ActionableElement loginButton;
+    private ActionableElement logoutButton;
 
-    public String getPath_two() {
-        return path_two;
+    public ActionableElement getUsernameField() {
+        return usernameField;
     }
 
-    public void setPath_two(String path_two) {
-        this.path_two = path_two;
+    public void setUsernameField(ActionableElement usernameField) {
+        this.usernameField = usernameField;
     }
 
-    public String getPath_three() {
-        return path_three;
+    public ActionableElement getPasswordField() {
+        return passwordField;
     }
 
-    public void setPath_three(String path_three) {
-        this.path_three = path_three;
+    public void setPasswordField(ActionableElement passwordField) {
+        this.passwordField = passwordField;
     }
 
-    public String getPath_one() {
-        return path_one;
+    public ActionableElement getLoginButton() {
+        return loginButton;
     }
 
-    public void setPath_one(String path_one) {
-        this.path_one = path_one;
+    public void setLoginButton(ActionableElement loginButton) {
+        this.loginButton = loginButton;
     }
 
+    public void setLogoutButton(ActionableElement logoutButton) {
+        this.logoutButton = logoutButton;
+    }
+
+    public ActionableElement getLogoutButton() {
+        return logoutButton;
+    }
 }

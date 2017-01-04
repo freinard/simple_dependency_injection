@@ -2,8 +2,25 @@ package play;
 
 public class ActionableElement {
 
-    public void click(String id){
+    private final String id;
 
+    public ActionableElement(String id) {
+        this.id = id;
     }
 
+    public void click() {
+        print(id + " was clicked.");
+    }
+
+    public void perform(Action action) {
+        print(action.getAction() + " was performed on " + id + " with " + action.getArgument());
+    }
+
+    public void print(String output) {
+        System.out.println(output);
+    }
+
+    public String getId() {
+        return id;
+    }
 }

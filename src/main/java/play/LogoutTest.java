@@ -9,12 +9,9 @@ public class LogoutTest {
     }
 
     public void run() {
-        /*
-        * Execute Logout test sequence
-        * */
-
-        paths.getPath_one().click("btnSubmit");
-
+        // execute logout sequence
+        paths.getLogoutButton().click();
+        // do some validation
     }
 
 }

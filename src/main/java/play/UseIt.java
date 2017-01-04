@@ -4,20 +4,21 @@ public class UseIt {
 
     public static void main(String[] args) {
         Paths myPaths = new Paths();
-        myPaths.setPath_one(onView(withId(R.id.user_name)));
-//        myPaths.setPath_two(onView(withId(R.id.user_name)));
-//        myPaths.setPath_three(onView(withId(R.id.user_name)));
+        myPaths.setUsernameField(onView(withId(R.id.user_name)));
+        myPaths.setPasswordField(onView(withId(R.id.password)));
+        myPaths.setLoginButton(onView(withId(R.id.login_button)));
+        myPaths.setLogoutButton(onView(withId(R.id.logout_button)));
 
         TopTest myTest = new TopTest(myPaths);
         myTest.run();
     }
 
     public static ActionableElement onView(Element e) {
-        return new ActionableElement();
+        return new ActionableElement(e.getId());
     }
 
     public static Element withId(String id) {
-        return new Element();
+        return new Element(id);
     }
 
     public void typeText() {
@@ -29,11 +30,23 @@ public class UseIt {
     }
 
     protected static class Identity {
-        public static String user_name;
+        public static String user_name = "username";
+        public static String password = "password";
+        public static String login_button = "loginBtn";
+        public static String logout_button = "logoutBtn";
     }
 
     private static class Element{
 
+        private final String id;
+
+        public Element(String id) {
+            this.id = id;
+        }
+
+        public String getId() {
+            return id;
+        }
     }
 
 }
