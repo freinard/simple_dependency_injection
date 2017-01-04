@@ -1,4 +1,6 @@
-package play;
+package play.test;
+
+import play.fakeEspresso.Action;
 
 public class LoginTest {
 

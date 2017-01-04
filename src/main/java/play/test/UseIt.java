@@ -1,4 +1,8 @@
-package play;
+package play.test;
+
+import play.fakeEspresso.ActionableElement;
+import play.fakeEspresso.Element;
+import play.fakeEspresso.R;
 
 public class UseIt {
 
@@ -19,34 +23,6 @@ public class UseIt {
 
     public static Element withId(String id) {
         return new Element(id);
-    }
-
-    public void typeText() {
-
-    }
-
-    private static class R {
-        public static Identity id;
-    }
-
-    protected static class Identity {
-        public static String user_name = "username";
-        public static String password = "password";
-        public static String login_button = "loginBtn";
-        public static String logout_button = "logoutBtn";
-    }
-
-    private static class Element{
-
-        private final String id;
-
-        public Element(String id) {
-            this.id = id;
-        }
-
-        public String getId() {
-            return id;
-        }
     }
 
 }
